@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Hyper.media(*)</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <header id="header">
+            <span class="icon">
+                <img src="./assets/baseline_email_black_18dp.png" alt="" srcset="">
+            </span>
+            <span class="icon">
+                <img src="./assets/baseline_email_black_18dp.png" alt="" srcset="">
+            </span>
+            <span class="icon">
+                <img src="./assets/baseline_email_black_18dp.png" alt="" srcset="">
+            </span>
+        </header>
+        <div class="content" id="intro">
+            <div id="desc">
+                <div id="title">
+                    <h1 class="main-title">Hyper</h1>
+                    <h1 class="main-title">Media(*)</h1>
+                </div>
+                <div id="main-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis mauris ac nunc faucibus consequat eu in quam. Nullam cursus nisl arcu, feugiat porta justo commodo non. Maecenas ultricies sit amet magna vitae aliquam. Aenean ut orci a nulla fermentum mattis.
+                    </p>
+                </div>
+
+                <div id="btns">
+                    <button id="about-btn" class="mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> About Us</button>
+                        <div class="mdc-select mdc-select--outlined">
+                            <div class="mdc-select__anchor">
+                              <i class="mdc-select__dropdown-icon"></i>
+                              <div id="demo-selected-text" class="mdc-select__selected-text" aria-labelledby="outlined-select-label"></div>
+                              <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                  <span id="outlined-select-label" class="mdc-floating-label">Select a protocol</span>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                              </div>
+                            </div>
+                          
+                            <!-- Other elements from the select remain. -->
+                            <div class="mdc-select__menu mdc-menu mdc-menu-surface" role="listbox">
+                                <ul class="mdc-list">
+                                    <li class="mdc-list-item" data-value="hls">
+                                      HLS
+                                    </li>
+                                    <li class="mdc-list-item" data-value="dash">
+                                      DASH
+                                    </li>
+                                    <li class="mdc-list-item" data-value="rtmp">
+                                      RTMP
+                                    </li>
+                                    <li class="mdc-list-item" data-value="rtmp-h2">
+                                        RTMP/w HTTP2
+                                      </li>
+                                      <li class="mdc-list-item" data-value="rtmp-h3">
+                                        RTMP/w HTTP3
+                                      </li>
+                                  </ul>
+
+                            </div>
+                            
+                          </div>
+
+                </div>
+            </div>
+
+            <div id="player">
+
+            </div>
+        </div>
+
+        <div class="content" id="latency">
+            
+        </div>
+
+        <footer>
+
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.1/DPlayer.min.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
