@@ -17,6 +17,7 @@ body {
 footer {
     background: #00000010 0% 0% no-repeat padding-box;
     height: auto;
+    min-height: 30vh;
     display: flex;
     flex-direction: row;
     padding-top: 5%;
