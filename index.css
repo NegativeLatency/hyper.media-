@@ -10,10 +10,22 @@ body {
     margin: 0;
 }
 
+.content {
+    min-height: calc(70vh - 2px);
+}
+
+footer {
+    background: #00000010 0% 0% no-repeat padding-box;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+}
+
 #header {
     display: flex;
     flex-direction: row-reverse;
-    height: 30%;
+    height: 20%;
 }
 
 #header span {
@@ -42,7 +54,7 @@ body {
 
 #main-content {
     color: #00000050;
-    font: Regular 16px/23px Arial Black;
+    font: 23px Arial Black;
     text-align: left;
 
 }
@@ -72,7 +84,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    min-height: calc(70vh - 2px);
 }
 
 #btns {
@@ -182,4 +193,47 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#forw-arrow {
+    font-weight: 900;
+    font-size: 52px;
+    color: #588BFF;
+    align-self: center;
+}
+
+.copyright {
+    text-align: left;
+    font: 17px Arial Black;
+    letter-spacing: -0.36px;
+    color: #00000050;
+    opacity: 1;
+}
+
+.usages {
+    display: flex;
+    flex-grow: 3;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.usage h1 {
+    font-size: 24px;
+}
+
+.usage p {
+    font-size: 20px;
+    letter-spacing: -0.6px;
+    color: #00000084;
+}
+
+.usage {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.copyright {
+    align-self: center;
+    margin-right: 5%;
 }

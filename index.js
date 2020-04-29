@@ -2,7 +2,35 @@ window.onload = () => {
     const dp = new DPlayer({
         container: document.getElementById('player'),
         video: {
-            url: 'demo.mp4',
+            quality: [
+                {
+                    name: 'HLS',
+                    url: 'demo.m3u8',
+                    type: 'hls',
+                },
+                {
+                    name: 'dash',
+                    url: 'demo.mp4',
+                    type: 'normal',
+                },
+                {
+                    name: 'rtmp',
+                    url: 'demo.mp4',
+                    type: 'normal',
+                },
+                {
+                    name: 'rtmp-h2',
+                    url: 'demo.mp4',
+                    type: 'normal',
+                },
+                {
+                    name: 'rtmp-h3',
+                    url: 'demo.mp4',
+                    type: 'normal',
+                },
+                
+            ],
+            defaultQuality: 0
         },
     });
 
