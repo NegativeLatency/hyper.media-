@@ -16,7 +16,7 @@ body {
 
 footer {
     background: #00000010 0% 0% no-repeat padding-box;
-    height: 30%;
+    height: auto;
     display: flex;
     flex-direction: row;
     padding-top: 5%;
@@ -219,12 +219,14 @@ footer {
 
 .usage h1 {
     font-size: 24px;
+    margin: 10px 0 10px 0
 }
 
 .usage p {
     font-size: 20px;
     letter-spacing: -0.6px;
     color: #00000084;
+    margin: 10px 0 10px 0
 }
 
 .usage {
