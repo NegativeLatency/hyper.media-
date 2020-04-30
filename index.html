@@ -1,92 +1,156 @@
 <html>
-    <head>
-        <title>Hyper.media(*)</title>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
-        <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="index.css">
-    </head>
 
-    <body>
-        <header id="header">
-            <span class="icon">
-                <img src="./assets/baseline_email_black_18dp.png" alt="" srcset="">
-            </span>
-            <span class="icon">
-                <img src="./assets/baseline_email_black_18dp.png" alt="" srcset="">
-            </span>
-            <span class="icon">
-                <img src="./assets/baseline_email_black_18dp.png" alt="" srcset="">
-            </span>
-        </header>
-        <div class="content" id="intro">
-            <div id="desc">
-                <div id="title">
-                    <h1 class="main-title">Hyper</h1>
-                    <h1 class="main-title">Media(*)</h1>
+<head>
+    <title>Hyper.media(*)</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header id="header">
+        
+        <span class="icon">
+            <a href="https://github.com/NegativeLatency/negativelatency.github.io" target="_blank">
+                <img src="./assets/github.svg" alt="github" srcset="">
+            </a>
+        </span>
+        <span class="icon">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/slack.svg" alt="slack" srcset="">
+            </a>
+        </span>
+        <span class="icon">
+            <a href="mailto:">
+                <img src="./assets/email.svg" alt="email" srcset="">
+            </a>
+        </span>
+    </header>
+    <div class="content" id="intro">
+        <div id="desc">
+            <div id="title">
+                <h1 class="main-title">Hyper</h1>
+                <h1 class="main-title">Media(*)</h1>
+            </div>
+            <div id="main-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis mauris ac nunc faucibus
+                    consequat eu in quam. Nullam cursus nisl arcu, feugiat porta justo commodo non. Maecenas ultricies
+                    sit amet magna vitae aliquam. Aenean ut orci a nulla fermentum mattis.
+                </p>
+            </div>
+
+            <div id="btns">
+                <button id="about-btn" class="mdc-button mdc-button--raised"> <span class="mdc-button__ripple"></span>
+                    About Us</button>
+                <div class="mdc-select mdc-select--outlined">
+                    <div class="mdc-select__anchor">
+                        <i class="mdc-select__dropdown-icon"></i>
+                        <div id="demo-selected-text" class="mdc-select__selected-text"
+                            aria-labelledby="outlined-select-label"></div>
+                        <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                                <span id="outlined-select-label" class="mdc-floating-label">Select a protocol</span>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                        </div>
+                    </div>
+
+                    <!-- Other elements from the select remain. -->
+                    <div class="mdc-select__menu mdc-menu mdc-menu-surface" role="listbox">
+                        <ul class="mdc-list">
+                            <li class="mdc-list-item" data-value="hls">
+                                HLS
+                            </li>
+                            <li class="mdc-list-item" data-value="dash">
+                                DASH
+                            </li>
+                            <li class="mdc-list-item" data-value="rtmp">
+                                RTMP
+                            </li>
+                            <li class="mdc-list-item" data-value="rtmp-h2">
+                                RTMP/w HTTP2
+                            </li>
+                            <li class="mdc-list-item" data-value="rtmp-h3">
+                                RTMP/w HTTP3
+                            </li>
+                        </ul>
+
+                    </div>
+
                 </div>
-                <div id="main-content">
+
+            </div>
+        </div>
+
+        <div id="player">
+
+        </div>
+    </div>
+
+    <hr id="line" style="align: center;">
+
+    <div class="content" id="latency">
+        <div id="caption">
+            <h1 class="main-caption">Stream the </h1>
+            <h1 class="main-caption"> World</h1>
+        </div>
+
+        <div id="vis">
+            <div id="vis-content"></div>
+            <div id="vis-desc">
+                <div class="top">
+                    <h1 class="city">NY</h1>
+                    <span id="forw-arrow" class="material-icons">
+                        arrow_right_alt
+                    </span>
+                    <h1 class="city">SH</h1>
+                </div>
+                <div class="bottom">
+                    <h2>Streamed From</h2>
+                    <h2>Your Location</h2>
+                </div>
+                <div class="note">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis mauris ac nunc faucibus consequat eu in quam. Nullam cursus nisl arcu, feugiat porta justo commodo non. Maecenas ultricies sit amet magna vitae aliquam. Aenean ut orci a nulla fermentum mattis.
+                        Notes: The streaming latency is real-time calculated based on your network condition and the streaming protocol you choose.
                     </p>
                 </div>
-
-                <div id="btns">
-                    <button id="about-btn" class="mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> About Us</button>
-                        <div class="mdc-select mdc-select--outlined">
-                            <div class="mdc-select__anchor">
-                              <i class="mdc-select__dropdown-icon"></i>
-                              <div id="demo-selected-text" class="mdc-select__selected-text" aria-labelledby="outlined-select-label"></div>
-                              <div class="mdc-notched-outline">
-                                <div class="mdc-notched-outline__leading"></div>
-                                <div class="mdc-notched-outline__notch">
-                                  <span id="outlined-select-label" class="mdc-floating-label">Select a protocol</span>
-                                </div>
-                                <div class="mdc-notched-outline__trailing"></div>
-                              </div>
-                            </div>
-                          
-                            <!-- Other elements from the select remain. -->
-                            <div class="mdc-select__menu mdc-menu mdc-menu-surface" role="listbox">
-                                <ul class="mdc-list">
-                                    <li class="mdc-list-item" data-value="hls">
-                                      HLS
-                                    </li>
-                                    <li class="mdc-list-item" data-value="dash">
-                                      DASH
-                                    </li>
-                                    <li class="mdc-list-item" data-value="rtmp">
-                                      RTMP
-                                    </li>
-                                    <li class="mdc-list-item" data-value="rtmp-h2">
-                                        RTMP/w HTTP2
-                                      </li>
-                                      <li class="mdc-list-item" data-value="rtmp-h3">
-                                        RTMP/w HTTP3
-                                      </li>
-                                  </ul>
-
-                            </div>
-                            
-                          </div>
-
-                </div>
-            </div>
-
-            <div id="player">
-
             </div>
         </div>
+    </div>
 
-        <div class="content" id="latency">
-            
+    <footer>
+        <div class="usages">
+            <div class="usage">
+                <h1>Open Source</h1>
+                <p>d3js</p>
+                <p>eCharts</p>
+                <p>FFmpeg</p>
+                <p>Node-Media-Server</p>
+            </div>
+            <div class="usage">
+                <h1>Special Thanks</h1>
+                <p>Prof. Christian Grewell</p>
+                <p>Prof. Olivier Marin</p>
+            </div>
+            <div class="usage">
+                <h1>Cloud Provider</h1>
+                <p>Ali cloud</p>
+                <p>AWS</p>
+            </div>
         </div>
+        <div class="copyright">
+            <p>© Copyright 2020, Hypermedia() Groups, NYU Shanghai</p>
+        </div>
+    </footer>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.13.2/hls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/3.1.0/dash.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.1/DPlayer.min.js"></script>
+    <script src="./index.js"></script>
+</body>
 
-        <footer>
-
-        </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.1/DPlayer.min.js"></script>
-        <script src="./index.js"></script>
-    </body>
 </html>
