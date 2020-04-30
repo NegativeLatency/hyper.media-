@@ -1,17 +1,18 @@
 window.onload = () => {
     const dp = new DPlayer({
         container: document.getElementById('player'),
+        live: true,
         video: {
             quality: [
                 {
                     name: 'HLS',
-                    url: 'demo.m3u8',
+                    url: 'https://bitmovin-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
                     type: 'hls',
                 },
                 {
                     name: 'dash',
-                    url: 'demo.mp4',
-                    type: 'normal',
+                    url: 'https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd',
+                    type: 'dash',
                 },
                 {
                     name: 'rtmp',
@@ -40,7 +41,10 @@ window.onload = () => {
     const select = new MDCSelect(document.querySelector('.mdc-select'));
 
     select.listen('MDCSelect:change', () => {
-       console.log(select.value)
+    //    console.log(select.value)
+    //    console.log(select)
+    //    console.log(select.foundation_.selectedIndex_)
        //dp.switchVideo()
+       dp.switchQuality(select.foundation_.selectedIndex_)
     });
 }
