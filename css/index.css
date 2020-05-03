@@ -81,6 +81,7 @@ footer {
 #player {
     width: 657;
     height: 369;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: gray 10px 10px 10px;
 }
