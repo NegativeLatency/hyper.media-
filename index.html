@@ -47,6 +47,7 @@
             <div id="btns">
                 <button id="about-btn" class="mdc-button mdc-button--raised"> <span class="mdc-button__ripple"></span>
                     About Us</button>
+
                 <div class="mdc-select mdc-select--outlined">
                     <div class="mdc-select__anchor">
                         <i class="mdc-select__dropdown-icon"></i>
@@ -100,6 +101,19 @@
 
     <hr id="line" style="align: center;">
 
+    <div class="content" id="hidden">
+
+        <div id="player1">
+            <video id="my_video_2" class="video-js vjs-default-skin vjs-live" width="657px" height="369px"
+                controls preload="none" poster='http://video-js.zencoder.com/oceans-clip.jpg'>
+                <source src="https://bitmovin-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8" type="application/x-mpegURL">
+                <!-- <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
+                <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' /> -->
+            </video>
+        </div>
+    </div>
+    <hr id="line" style="align: center;">
+
     <div class="content" id="latency">
         <div id="caption">
             <h1 class="main-caption">Stream the </h1>
@@ -107,7 +121,9 @@
         </div>
 
         <div id="vis">
-            <div id="vis-content"></div>
+            <div id="vis-content">
+                <img src="./assets/map.png">
+            </div>
             <div id="vis-desc">
                 <div class="top">
                     <h1 class="city">NY</h1>
@@ -154,9 +170,6 @@
         </div>
     </footer>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.13.2/hls.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/3.1.0/dash.all.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.1/DPlayer.min.js"></script>
     <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
     <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/videojs-flash@2/dist/videojs-flash.min.js"></script>

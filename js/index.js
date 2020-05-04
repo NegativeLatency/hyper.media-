@@ -1,4 +1,5 @@
 import '../css/player.scss';
+
 const sources = [
   {
     src: 'https://bitmovin-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
@@ -9,8 +10,13 @@ const sources = [
   }, {
     src: 'rtmp://live.prod.im:8986/live/anpu',
     type: 'rtmp/flv'
-  },
-  "https://vjs.zencdn.net/v/oceans.mp4" // this is a mp4 video just for test
+  }, {
+    src: 'rtmp://live.prod.im:8988/live/anpu',
+    type: 'rtmp/flv'
+  }, {
+    src: 'rtmp://live.prod.im:8989/live/anpu',
+    type: 'rtmp/flv'
+  }
 ]
 let options = {
   liveui: true,
@@ -18,8 +24,13 @@ let options = {
   techOrder: ['html5', 'flash'],
 };
 
-window.onload = () => {
-  let player = videojs('my_video_1', options, function onPlayerReady() {
+let player;
+
+window.onresize = () => {
+  const queryRes = window.matchMedia("(max-width: 1280px)").matches
+  const videoId = queryRes ? "my_video_2" : "my_video_1";
+  player && player.pause();
+  player = videojs(videoId, options, function onPlayerReady() {
     videojs.log('Your player is ready!');
   
     // In this context, `this` is the player that was created by Video.js.
@@ -29,10 +40,25 @@ window.onload = () => {
       videojs.log('Awww...over so soon?!');
     });
   });
+}
 
+window.onload = () => {
+  const queryRes = window.matchMedia("(max-width: 1280px)").matches
+  const videoId = queryRes ? "my_video_2" : "my_video_1";
   const {MDCSelect} = mdc.select
 
   const select = new MDCSelect(document.querySelector('.mdc-select'));
+
+  player = videojs(videoId, options, function onPlayerReady() {
+    videojs.log('Your player is ready!');
+  
+    // In this context, `this` is the player that was created by Video.js.
+    // this.play();
+    // How about an event listener?
+    this.on('ended', function() {
+      videojs.log('Awww...over so soon?!');
+    });
+  });
 
   select.listen('MDCSelect:change', () => {
     //  console.log(select.value)

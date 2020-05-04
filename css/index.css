@@ -167,8 +167,13 @@ footer {
 }
 
 #vis-content {
-    width: 868px;
-    height: 439px;
+    width: calc(100% - 545px);
+    height: 100%;
+}
+
+#vis-content img {
+    width: 100%;
+    height: 100%;
 }
 
 #vis-desc {
@@ -253,4 +258,24 @@ footer {
 .copyright {
     align-self: center;
     margin-right: 5%;
+}
+
+#hidden {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#player1 {
+    align-self: center;
+}
+
+@media screen and (max-width: 1280px) {
+    #player {
+        display: none;
+    }
+
+    #hidden {
+        display: flex;
+    }
 }
